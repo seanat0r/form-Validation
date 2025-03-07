@@ -9,16 +9,15 @@
     <form id="form" novalidate>
         <!--* EMAIL -->
         <label for="email">E-Mail: </label>
-        <input type="email" name="email" id="email" required><br>
+        <input type="email" name="email" id="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required><br>
 
         <!--* PASSWORD 1 -->
         <label for="password1">Password: </label> 
-        <input type="password" name="password1" id="password1" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()=|,.?;:'&quot;{}[\]\\/`~^_+-]).{8,}$" minlength="8"><br>
+        <input type="password" name="password1" id="password1" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+\-]).{8,}$"" minlength="8"><br>
 
         <!--* PASSWORD 2 -->
         <label for="passwordCheck">Enter the same password again: </label>
-        <input type="password" name="passwordCheck" id="passwordCheck" required 
-        pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()=|,.?;:'&quot;{}[\]\\/`~^_+-]).{8,}$" minlength="8"> <br>
+        <input type="password" name="passwordCheck" id="passwordCheck" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+\-]).{8,}$" minlength="8"> <br>
 
         <!--* COUNTRY -->
         <label for="Country">Select Country: </label>
