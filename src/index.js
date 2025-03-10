@@ -45,8 +45,8 @@ class FormValidation {
 	}
 
 	#patternMismatch(value) {
-		console.log(value)
-		if (value.type === "email") { 
+		console.log(value);
+		if (value.type === "email") {
 			value.setCustomValidity("Email must contain @ and TLD");
 			return;
 		}
@@ -54,7 +54,7 @@ class FormValidation {
 			value.setCustomValidity(
 				"Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character. Country can't have any Number."
 			);
-			return
+			return;
 		}
 		value.setCustomValidity("Input doesn't match with regex");
 	}
@@ -80,8 +80,8 @@ class FormValidation {
 				value.value
 			);
 			this.#patternMismatch(value);
-			
 		}
+
 		value.reportValidity();
 	}
 
